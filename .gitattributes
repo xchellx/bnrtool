@@ -1,2 +1,4 @@
-# Enforce LF for shell scripts files
+# Enforce LF for shell scripts
 *.sh text=auto eol=lf
+# Enforce CRLF for batch scripts
+*.bat text=auto eol=crlf
