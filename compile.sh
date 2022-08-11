@@ -9,7 +9,8 @@ elif [ $# -gt 0 ]; then
     fi
 fi
 if [ ! -d "./dst" ]; then mkdir ./dst ; fi
-gcc -std=c99 $ASAN -Wno-address-of-packed-member -Wno-stringop-overflow -Wvla -o ./dst/bnrtool$OUTEXT ./src/bnrtool.c \
+gcc -std=c99 $ASAN -Wno-address-of-packed-member -Wno-stringop-overflow -Wvla -o ./dst/bnrtool$OUTEXT \
+    ./src/bnrtool.c \
     ./src/tga.c \
     ./src/gxtexture.c \
     ./src/strsep.c \
