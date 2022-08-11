@@ -78,16 +78,31 @@ int main(int argc, char** argv) {
     if (mode == MODE_EXPORT) {
         // Flag handling
         if (argc > 5) {
+            char* fptr;
             for (uint32_t a = 5; a < argc; a++) {
-                if (!strcmp(argv[a], "--force-img"))
-                    forceImg = 1;
-                else if (!strcmp(argv[a], "--force-cmt"))
-                    forceCmt = 1;
-                else if (!strcmp(argv[a], "-s") || !strcmp(argv[a], "--silent"))
-                    silent = 1;
-                else if (!strcmp(argv[a], "-f") || !strcmp(argv[a], "--force")) {
-                    forceImg = 1;
-                    forceCmt = 1;
+                if (argv[a][0] == '-') {
+                    if (argv[a][1] == '-') {
+                        if (!strcmp(argv[a], "--force-img"))
+                            forceImg = 1;
+                        else if (!strcmp(argv[a], "--force-cmt"))
+                            forceCmt = 1;
+                        else if (!strcmp(argv[a], "--silent"))
+                            silent = 1;
+                        else if (!strcmp(argv[a], "--force")) {
+                            forceImg = 1;
+                            forceCmt = 1;
+                        }
+                    } else {
+                        fptr = argv[a];
+                        while ((fptr = (fptr + 1))[0] != '\0') {
+                            if (fptr[0] == 's')
+                                silent = 1;
+                            else if (fptr[0] == 'f') {
+                                forceImg = 1;
+                                forceCmt = 1;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -258,13 +273,29 @@ int main(int argc, char** argv) {
         return STATUS_SUCCESS;
     } else if (mode == MODE_IMPORT) {
         // Flag handling
+        // Flag handling
         if (argc > 6) {
+            char* fptr;
             for (uint32_t a = 6; a < argc; a++) {
-                if (!strcmp(argv[a], "-s") || !strcmp(argv[a], "--silent"))
-                    silent = 1;
-                else if (!strcmp(argv[a], "-f") || !strcmp(argv[a], "--force")) {
-                    forceImg = 1;
-                    forceCmt = 1;
+                if (argv[a][0] == '-') {
+                    if (argv[a][1] == '-') {
+                        if (!strcmp(argv[a], "--silent"))
+                            silent = 1;
+                        else if (!strcmp(argv[a], "--force")) {
+                            forceImg = 1;
+                            forceCmt = 1;
+                        }
+                    } else {
+                        fptr = argv[a];
+                        while ((fptr = (fptr + 1))[0] != '\0') {
+                            if (fptr[0] == 's')
+                                silent = 1;
+                            else if (fptr[0] == 'f') {
+                                forceImg = 1;
+                                forceCmt = 1;
+                            }
+                        }
+                    }
                 }
             }
         }

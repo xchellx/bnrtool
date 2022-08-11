@@ -28,8 +28,6 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "common.h"
-
 typedef enum __TGAError {
     TGA_ERR_SUCCESS,
     TGA_ERR_IDLENNEQ0,
