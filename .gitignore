@@ -1,0 +1,4 @@
+# compilation output
+/**/*.exe
+# log output
+/**/*.log
