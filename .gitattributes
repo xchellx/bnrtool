@@ -2,3 +2,4 @@
 *.sh text=auto eol=lf
 # Enforce CRLF for batch scripts
 *.bat text=auto eol=crlf
+*.cmd text=auto eol=crlf

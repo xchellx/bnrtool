@@ -1,7 +1,7 @@
-/*
+﻿/*
  * MIT License
  * 
- * Copyright (c) 2022 Yonder
+ * Copyright (c) 2023 Yonder
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,17 +22,14 @@
  * SOFTWARE.
  */
 
-#ifndef _CGETCHAR_H_
-#define _CGETCHAR_H_
-#include <stdio.h>
-#include <stdlib.h>
-
-#ifdef _WIN32
-#include <conio.h>
-#else
-#include <unistd.h>
-#include <termios.h>
-#endif
-
-char cgetchar(char echoc);
-#endif
+namespace bnrtool
+{
+    public enum Status : int
+    {
+        Success = 0,
+        Error = 1,
+        IOError = 2,
+        ArgError = 3,
+        FmtError = 3
+    }
+}

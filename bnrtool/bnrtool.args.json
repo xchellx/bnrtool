@@ -1,0 +1,336 @@
+{
+  "FileVersion": 2,
+  "Id": "7a1c9e5f-71f8-4e9c-9d59-ea66688d7f4b",
+  "Items": [
+    {
+      "Id": "1434e43e-a64d-4f0d-b0a0-44b7e62e3da4",
+      "Command": "Decode",
+      "Items": [
+        {
+          "Id": "eff5a621-a184-4593-814d-81938b3a83d7",
+          "Command": "BNR1 - English",
+          "Items": [
+            {
+              "Id": "ce891ef0-688c-4c96-91a6-db05e4853c5e",
+              "Command": "decode"
+            },
+            {
+              "Id": "967f932c-2bb6-45ed-8536-cac1b2760482",
+              "Command": "-f"
+            },
+            {
+              "Id": "2e64bcb9-abf9-4e98-a014-f92a1ec55f1d",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us.bnr"
+            },
+            {
+              "Id": "6a4812ed-bafe-4a74-b792-f1e59de236dd",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us.png"
+            },
+            {
+              "Id": "9d4b933c-aedc-40c7-9e85-146e7e2c7d8b",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "45e6b518-34c5-4754-9d22-72e831b0015d",
+          "Command": "BNR1 - Japanese",
+          "Items": [
+            {
+              "Id": "5978e91c-bbe4-4bb3-ab18-8b37f8be325d",
+              "Command": "decode"
+            },
+            {
+              "Id": "13c3953f-f5fa-421b-96df-4c45b80244b3",
+              "Command": "-jf"
+            },
+            {
+              "Id": "debb4ee2-7f5e-4d25-844e-b8875e30928f",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap.bnr"
+            },
+            {
+              "Id": "6628c333-f877-485b-ae48-5cca7bfeef0d",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap.png"
+            },
+            {
+              "Id": "bc689b35-a320-4372-a7f7-e092ddb31165",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "446edb87-adc7-4b88-bf8d-2ae0e2549d17",
+          "Command": "BNR2",
+          "Items": [
+            {
+              "Id": "dfd6ba23-0c9f-467a-9cad-8b893f8e5ec1",
+              "Command": "decode"
+            },
+            {
+              "Id": "720866df-fb85-4dfd-98ec-d017ea9ac5a5",
+              "Command": "-f"
+            },
+            {
+              "Id": "9e8a5845-2d94-45a8-bfcd-92a0b185acab",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal.bnr"
+            },
+            {
+              "Id": "43154d8f-74c6-4e40-8d19-3b0f21fefed5",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal.png"
+            },
+            {
+              "Id": "a6654eb2-458a-4eee-abe0-35c8b0723a84",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "0eae6160-6c35-4962-b7fd-df3d1b3e5b3f",
+          "Command": "BNR1 - English (Transparent Image)",
+          "Items": [
+            {
+              "Id": "95433102-b0bf-44fb-b3b6-40ff0dafe254",
+              "Command": "decode"
+            },
+            {
+              "Id": "108e6126-35dd-4f27-9128-d936201794e4",
+              "Command": "-f"
+            },
+            {
+              "Id": "ec687588-290c-4265-afad-ca1d31216f6c",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening.bnr"
+            },
+            {
+              "Id": "5ef92444-c3ef-4c41-94b6-a22a7a24c276",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening.png"
+            },
+            {
+              "Id": "6326dbdb-a53a-40a8-9298-501f34acc38c",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening.yaml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "e3765178-ecb9-4ec4-9914-fab83b40d85a",
+      "Command": "Encode (Decode)",
+      "Items": [
+        {
+          "Id": "801e0eab-8c49-4072-947e-e20417b4fef0",
+          "Command": "BNR1 - English",
+          "Items": [
+            {
+              "Id": "74c263ca-2bd2-4712-bd1a-f7918b3fdb7a",
+              "Command": "encode"
+            },
+            {
+              "Id": "bf82fe60-7059-4230-83fb-00d7239c6aea",
+              "Command": "-f"
+            },
+            {
+              "Id": "ab7d1f7b-7ef0-4bd0-8db8-5e2c1348a53b",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us.png"
+            },
+            {
+              "Id": "fa50411a-c647-47d3-b4c7-fcb73ebf4b8b",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us.yaml"
+            },
+            {
+              "Id": "34c78c01-ec10-4922-9f67-478cca517ae2",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us_new.bnr"
+            }
+          ]
+        },
+        {
+          "Id": "9c779ae5-9363-4bc7-affd-a80783d8e3e2",
+          "Command": "BNR1 - Japanese",
+          "Items": [
+            {
+              "Id": "94beb557-131a-48d6-95f2-2aed6118f0b8",
+              "Command": "encode"
+            },
+            {
+              "Id": "b296008f-b405-429e-8973-de6bf188e4c7",
+              "Command": "-jf"
+            },
+            {
+              "Id": "27558f01-f714-4da5-b295-fe9cd05bbadc",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap.png"
+            },
+            {
+              "Id": "b1dfccb1-a8bf-4af7-9c5d-113e0d645535",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap.yaml"
+            },
+            {
+              "Id": "6691c682-f6c8-4839-9f9a-89d574aae41f",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap_new.bnr"
+            }
+          ]
+        },
+        {
+          "Id": "ee1b12d1-6a10-4ead-a4b4-7ebe32c384db",
+          "Command": "BNR2",
+          "Items": [
+            {
+              "Id": "23f80307-2257-4032-9ab8-b30756b104fb",
+              "Command": "encode"
+            },
+            {
+              "Id": "a0608190-ab2c-4b0f-9156-3100ea15173b",
+              "Command": "-f"
+            },
+            {
+              "Id": "7e699752-aa1e-48ee-90cc-9f81b5306c2f",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal.png"
+            },
+            {
+              "Id": "9b9b1141-684c-498e-9d5f-f648a25b285c",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal.yaml"
+            },
+            {
+              "Id": "a829695d-314a-4ed0-9f68-e6230a7b3573",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal_new.bnr"
+            }
+          ]
+        },
+        {
+          "Id": "43ba74e2-9b0c-441b-a262-4206bc0f4117",
+          "Command": "BNR1 - English (Transparent Image)",
+          "Items": [
+            {
+              "Id": "185a0f88-6bb7-4762-a215-a873b40b57a5",
+              "Command": "encode"
+            },
+            {
+              "Id": "7f007ab9-4fe6-42f4-b907-34577b6ad97d",
+              "Command": "-f"
+            },
+            {
+              "Id": "96ad1a20-3265-43db-8f97-88e18fb80e8a",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening.png"
+            },
+            {
+              "Id": "b2d7bcd8-2918-4195-9875-d808719dab15",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening.yaml"
+            },
+            {
+              "Id": "2ecb77b8-5e28-435d-b3f3-b02c9a1d0645",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_new.bnr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "e1727482-ae96-463c-bdec-b23baf90a755",
+      "Command": "Decode (Encode)",
+      "Items": [
+        {
+          "Id": "40ae4ca6-9721-4ef2-ba2c-9cd0751f795d",
+          "Command": "BNR1 - English",
+          "Items": [
+            {
+              "Id": "79162fdc-ba3e-4a3b-9a95-6531a8fe8c75",
+              "Command": "decode"
+            },
+            {
+              "Id": "2c2c62e8-2548-41a6-8e48-3e8b2bf2139c",
+              "Command": "-f"
+            },
+            {
+              "Id": "ede58bb1-3cbd-4546-8a00-9ecb811f44c2",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us_new.bnr"
+            },
+            {
+              "Id": "02b10d29-0300-494f-9cdc-322ea4d391eb",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us_new.png"
+            },
+            {
+              "Id": "00381576-4a72-40cf-8dcf-270e245b48c3",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_us_new.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "e4b97ab9-d570-41ff-b9c5-c3b426b8dda6",
+          "Command": "BNR1 - Japanese",
+          "Items": [
+            {
+              "Id": "199c18dc-f6c5-4c4a-a47d-fce261645e75",
+              "Command": "decode"
+            },
+            {
+              "Id": "6055e637-bcc1-4ab6-a00c-972832b10bdf",
+              "Command": "-jf"
+            },
+            {
+              "Id": "53404d26-7585-49ff-b6b1-a59b8ff8ede5",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap_new.bnr"
+            },
+            {
+              "Id": "00ad430c-3e96-44aa-b6ca-15f3406850e2",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap_new.png"
+            },
+            {
+              "Id": "ead19cc1-a004-4b44-a9a7-34a722209ada",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_jap_new.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "b6f6b142-3fec-49fe-9b63-8b0855c31212",
+          "Command": "BNR2",
+          "Items": [
+            {
+              "Id": "59ff8e4c-0944-4745-898b-5efaef143b09",
+              "Command": "decode"
+            },
+            {
+              "Id": "d5c4d0b1-624c-40f1-a34a-c0e1afb5493e",
+              "Command": "-f"
+            },
+            {
+              "Id": "6d55adf2-633d-4947-9cfa-98b999586650",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal_new.bnr"
+            },
+            {
+              "Id": "a3284d6f-a8bd-43a2-aae9-9b21e83adba6",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal_new.png"
+            },
+            {
+              "Id": "ba91b837-b596-40c3-81b1-d87b5be66a59",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_pal_new.yaml"
+            }
+          ]
+        },
+        {
+          "Id": "d16c8826-606c-4aa2-aa9c-64a8a198b3e9",
+          "Command": "BNR1 - English (Transparent Image)",
+          "Items": [
+            {
+              "Id": "e41c2309-a237-4146-9705-e37b573958fc",
+              "Command": "decode"
+            },
+            {
+              "Id": "866c28ba-d8e2-4b53-8b6a-080c2d7780a9",
+              "Command": "-f"
+            },
+            {
+              "Id": "e6313f25-f708-4ee0-ba99-bd88025c74a9",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_new.bnr"
+            },
+            {
+              "Id": "edf66fd5-cfd8-4a7c-870b-22c93c876104",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_new.png"
+            },
+            {
+              "Id": "2935017a-fe1c-4e94-a35c-53c6e9d65237",
+              "Command": "C:\\Users\\xjonx\\Desktop\\opening_new.yaml"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

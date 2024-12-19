@@ -1,0 +1,12 @@
+[submodule "extern/gxtexture_base_build"]
+	path = extern/gxtexture_base_build
+	url = https://github.com/xchellx/gxtexture_base_build
+[submodule "extern/UtilSharp"]
+	path = extern/UtilSharp
+	url = https://github.com/xchellx/UtilSharp.git
+[submodule "extern/SerializableSharp"]
+	path = extern/SerializableSharp
+	url = https://github.com/xchellx/SerializableSharp.git
+[submodule "extern/GXBaseSharp"]
+	path = extern/GXBaseSharp
+	url = https://github.com/xchellx/GXBaseSharp.git
