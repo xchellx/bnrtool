@@ -2,16 +2,16 @@
 dp0="$(dirname $(readlink -m $BASH_SOURCE))"
 destdir="$(printf '%s' $1 | sed -E -e 's/\\/\//g' -e 's/C:/\/c/g' -e 's/\"*([^\"]+)\"*/\1/')"
 echo "Packaging from publish dir ${destdir}..."
-if [ -d "${destdir}" ] && [ -f "${destdir}/bnrtool.exe" ] && [ -f "${destdir}/libc++.dll" ] && [ -f "${destdir}/libgxtexture.dll" ] ; then
+if [ -d "${destdir}" ] && [ -f "${destdir}/bnrtool.exe" ] && ( [ -n "${4}" ] || [ -f "${destdir}/libc++.dll" ] ) && [ -f "${destdir}/libgxtexture.dll" ] ; then
         mkdir -p "${destdir}/package/bnrtool"
         mkdir -p "${destdir}/package/bnrtool/licenses"
         cp -f "${destdir}/bnrtool.exe" "${destdir}/package/bnrtool/bnrtool.exe"
-        cp -f "${destdir}/libc++.dll" "${destdir}/package/bnrtool/libc++.dll"
+        [ -n "${4}" ] && cp -f "${destdir}/libc++.dll" "${destdir}/package/bnrtool/libc++.dll"
         cp -f "${destdir}/libgxtexture.dll" "${destdir}/package/bnrtool/libgxtexture.dll"
         "$dp0/hash.sh" "${destdir}/package/bnrtool/bnrtool.exe"
-        "$dp0/hash.sh" "${destdir}/package/bnrtool/libc++.dll"
+        [ -n "${4}" ] && "$dp0/hash.sh" "${destdir}/package/bnrtool/libc++.dll"
         "$dp0/hash.sh" "${destdir}/package/bnrtool/libgxtexture.dll"
-        "$dp0/libcver.sh" "${destdir}/package/bnrtool"
+        [ -n "${4}" ] && "$dp0/libcver.sh" "${destdir}/package/bnrtool"
         cp -f "$dp0/LICENSE" "${destdir}/package/bnrtool/LICENSE"
         cp -f "$dp0/README.md" "${destdir}/package/bnrtool/README.md"
         cp -f -R "$dp0/licenses/." "${destdir}/package/bnrtool/licenses"
@@ -26,7 +26,9 @@ if [ -d "${destdir}" ] && [ -f "${destdir}/bnrtool.exe" ] && [ -f "${destdir}/li
         exit 0
 else
     [ -f "${destdir}/bnrtool.exe" ] || echo "${destdir}/bnrtool.exe doesnt exist; packaging failed"
-    [ -f "${destdir}/libc++.dll" ] || echo "${destdir}/libc++.dll doesnt exist; packaging failed"
+    if [ -n "${4}" ] && [ -f "${destdir}/libc++.dll" ] ; then
+        echo "${destdir}/libc++.dll doesnt exist; packaging failed"
+    fi
     [ -f "${destdir}/libgxtexture.dll" ] || echo "${destdir}/libgxtexture.dll doesnt exist; packaging failed"
     [ -d "${destdir}" ] || echo "${destdir} doesnt exist; packaging failed"
     return 1 2>/dev/null
