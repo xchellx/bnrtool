@@ -6,7 +6,7 @@ Encodes and decodes BNR banner files for the Nintendo GameCube.
 - [Building](#building)
 
 ## Info
-Nintendo GameCube uses a banner file to display am icon, name, maker, and description at the disc section in the BIOS. A BNR file is custom binary which holds a magic number to identify whether it's a BNR1 or BNR 2 file, a 96x32 GX encoded RGB5A3 image, and text info of a short title and maker, a long title and maker, and a comment. These blocks of info can be of 6 different blocks for English, German, French, Spanish, Italian, and Dutch in BNR2 where in BNR1 it is just a single block for either English or Japanese. bnrtool can decode a BNR file to a PNG or TGA image and a YAML text file and back to a BNR file. It supports both BNR1 and BNR2 formats as well as ShiftJIS encoding for Japanese BNR1 files.
+Nintendo GameCube uses a banner file to display am icon, name, maker, and description at the disc section in the BIOS. A BNR file is custom binary which holds a magic number to identify whether it's a BNR1 or BNR 2 file, 32 byte alignment after the magic number, a 96x32 GX encoded RGB5A3 image, and text info of a short title and maker, a long title and maker, and a comment. These blocks of info can be of 6 different blocks for English, German, French, Spanish, Italian, and Dutch in BNR2 where in BNR1 it is just a single block for either English or Japanese. bnrtool can decode a BNR file to a PNG or TGA image and a YAML text file and back to a BNR file. It supports both BNR1 and BNR2 formats as well as ShiftJIS encoding for Japanese BNR1 files.
 
 ## Building
 
