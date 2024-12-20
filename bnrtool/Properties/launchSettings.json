@@ -1,8 +1,7 @@
 {
   "profiles": {
     "bnrtool": {
-      "commandName": "Project",
-      "commandLineArgs": "decode -f C:\\Users\\xjonx\\Desktop\\opening_us.bnr C:\\Users\\xjonx\\Desktop\\opening_us.png C:\\Users\\xjonx\\Desktop\\opening_us.yaml"
+      "commandName": "Project"
     }
   }
 }

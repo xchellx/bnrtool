@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bnrtool", "bnrtool\bnrtool.csproj", "{7A1C9E5F-71F8-4E9C-9D59-EA66688D7F4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1C9E5F-71F8-4E9C-9D59-EA66688D7F4B}.Debug|x64.ActiveCfg = Debug|x64
+		{7A1C9E5F-71F8-4E9C-9D59-EA66688D7F4B}.Debug|x64.Build.0 = Debug|x64
+		{7A1C9E5F-71F8-4E9C-9D59-EA66688D7F4B}.Release|x64.ActiveCfg = Release|x64
+		{7A1C9E5F-71F8-4E9C-9D59-EA66688D7F4B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E76B6B2D-AF96-4BC0-BD21-AF390206A975}
+	EndGlobalSection
+EndGlobal

@@ -18,4 +18,4 @@ TODO: Building.
 TODO: Building.
 
 ### Additional
-Although you can build/publish for Linux on Windows, it is not supported due to how the build script works in GXBase/GXTextureSharp as it calls gxtexture_base_build/build.sh on Linux and gxtexture_base_build/build.cmd on Windows so if you are targetting Linux on Windows it will just hange. Additionally, bnrtool builds with NativeAOT, which does not support cross platform building, so you couldn't even publish bnrtool for Linux when on Windows in the first place.
+Although you can build/publish for Linux on Windows, it is not supported due to how the build script works in GXBase/GXTextureSharp as it calls gxtexture_base_build/build.sh on Linux and gxtexture_base_build/build.cmd on Windows so if you are targetting Linux on Windows it will just hang. Additionally, bnrtool builds with NativeAOT, which does not support cross platform building, so you couldn't even publish bnrtool for Linux when on Windows in the first place.
