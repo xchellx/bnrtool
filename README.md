@@ -31,7 +31,7 @@ Nintendo GameCube uses a banner file to display am icon, name, maker, and descri
 #### Visual Studio
 1. Open `bnrtool.sln` in your file explorer (or within Visual Studio).
 2. Right click `bnrtool` in the `Solution Explorer` panel and click `Publish`.
-3. Click the `<rid>.pubxml` dropdown and select the `<rid>` of the platform you want to publish for`.
+3. Click the `<rid>.pubxml` dropdown and select the `<rid>` of the platform you want to publish for (`win-x64.pubxml` or `linux-x64.pubxnml` for example).
 4. The resulting binary and it's dependencies should be in the 7z archive at `$(ProjectDir)/bin/x64/Release/<target_framework>/publish/win-x64//bnrtool_<commit_or_tag>_msys2-clang64_$(TargetFramework)_win-x64.7z`.
 
 #### dotnet CLI
