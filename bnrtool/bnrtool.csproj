@@ -58,7 +58,7 @@
   </ItemGroup>
 
   <Target Name="PostPublish" AfterTargets="CopyFilesToPublishDirectory">
-    <Exec Command="$(SolutionDir)/package.cmd $(ProjectDir)\$(PublishDir) $(TargetFramework) $(RuntimeIdentifier) 1" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <Exec Command="$(SolutionDir)/package.cmd $(ProjectDir)\$(PublishDir) $(TargetFramework) $(RuntimeIdentifier) libc++.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
     <Exec Command="$(SolutionDir)/package.sh $(ProjectDir)\$(PublishDir) $(TargetFramework) $(RuntimeIdentifier)" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
   </Target>
 
