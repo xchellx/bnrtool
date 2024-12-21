@@ -174,13 +174,13 @@ namespace bnrtool
             }
             catch (SerializationException e)
             {
-                StdErr.WriteLine("ERROR: Failed to read BNR: {0} (1}", e, e.InnerException?.ToString() ??
+                StdErr.WriteLine("ERROR: Failed to read BNR: {0} {1}", e, e.InnerException?.ToString() ??
                     string.Empty);
                 return Status.IOError;
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Unexpected error when reading BNR: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Unexpected error when reading BNR: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.IOError;
             }
@@ -199,7 +199,7 @@ namespace bnrtool
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Failed to decode BNR image: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Failed to decode BNR image: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.FmtError;
             }
@@ -217,7 +217,7 @@ namespace bnrtool
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Failed to decode BNR info: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Failed to decode BNR info: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.FmtError;
             }
@@ -306,7 +306,7 @@ namespace bnrtool
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Failed to encode BNR image: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Failed to encode BNR image: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.FmtError;
             }
@@ -323,7 +323,7 @@ namespace bnrtool
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Failed to encode BNR info: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Failed to encode BNR info: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.FmtError;
             }
@@ -343,13 +343,13 @@ namespace bnrtool
             }
             catch (SerializationException e)
             {
-                StdErr.WriteLine("ERROR: Failed to write BNR: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Failed to write BNR: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.IOError;
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Unexpected error when writing BNR: {0} (1}", e, e.InnerException?.ToString()
+                StdErr.WriteLine("ERROR: Unexpected error when writing BNR: {0} {1}", e, e.InnerException?.ToString()
                     ?? string.Empty);
                 return Status.IOError;
             }
