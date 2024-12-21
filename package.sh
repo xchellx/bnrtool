@@ -4,7 +4,7 @@ destdir="$(printf '%s' $1 | sed -E -e 's/\\/\//g' -e 's/C:/\/c/g' -e 's/\"*([^\"
 iswin=""
 [ -n "${4}" ] && iswin="1"
 isfile=""
-if [ -n "${4}" ] && [ "${4}" == *dll ] ; then
+if [ -n "${4}" ] && [ "${4}" != "$(printf '%s' "${4}" | sed 's/'"dll"'//g')" ] ; then
     isfile="1"
 fi
 [ -n "${iswin}" ] && lext=".dll" || lext=".so"
@@ -29,12 +29,13 @@ if [ -d "${destdir}" ] && [ -f "${destdir}/bnrtool${eext}" ] && ( [ -z "${isfile
             [ -z "$(git status --porcelain 2> /dev/null)" ] && VERSION="$(git rev-parse --short HEAD 2> /dev/null)" || VERSION="$(git rev-parse --short HEAD 2> /dev/null)-dirty"
         fi
         [ -z "${VERSION}" ] && VERSION="unknown"
+        [ -f "${destdir}/bnrtool_${VERSION}_msys2-clang64_$2_$3.7z" ] && rm -f "${destdir}/bnrtool_${VERSION}_msys2-clang64_$2_$3.7z"
         7za a -ssw -t7z -mx=9 -myx=9 -ms=off -mmt=16 -mmtf=on -mtm=off -mtc=off -mta=off -m0=LZMA2:d=256m:mf=bt4:lc=4:fb=256 "${destdir}/bnrtool_${VERSION}_msys2-clang64_$2_$3.7z" "${destdir}/package/bnrtool/"
         return 0 2>/dev/null
         exit 0
 else
     [ -f "${destdir}/bnrtool${eext}" ] || echo "${destdir}/bnrtool${eext} doesnt exist; packaging failed"
-    if [ -n "${isfile}" ] && [ -f "${destdir}/${4}" ] ; then
+    if [ -n "${isfile}" ] && ! [ -f "${destdir}/${4}" ] ; then
         echo "${destdir}/${4} doesnt exist; packaging failed"
     fi
     [ -f "${destdir}/libgxtexture${lext}" ] || echo "${destdir}/libgxtexture${lext} doesnt exist; packaging failed"
