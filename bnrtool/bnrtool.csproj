@@ -20,10 +20,6 @@
     <Product>$(AssemblyName)</Product>
     <Description>Encodes and decodes BNR banner files for the Nintendo GameCube.</Description>
     <Copyright>Copyright © Yonder 2024</Copyright>
-    <FileVersion>1.0.0</FileVersion>
-    <InformationalVersion>1.0.0</InformationalVersion>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0</Version>
     <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
     <PackAsTool>False</PackAsTool>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
@@ -32,6 +28,7 @@
     <IsTrimmable>true</IsTrimmable>
     <TrimmerSingleWarn>false</TrimmerSingleWarn>
     <PublishAot>true</PublishAot>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
 
   <PropertyGroup  Condition="'$(Configuration)' == 'Release'">
@@ -57,9 +54,32 @@
     <TrimmerRootAssembly Include="UtilSharp" />
   </ItemGroup>
 
-  <Target Name="PostPublish" AfterTargets="CopyFilesToPublishDirectory">
+  <Target Name="bnrtool_PostPublish" AfterTargets="CopyFilesToPublishDirectory">
     <Exec Command="$(SolutionDir)/package.cmd $(ProjectDir)\$(PublishDir) $(TargetFramework) $(RuntimeIdentifier) libc++.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
     <Exec Command="$(SolutionDir)/package.sh $(ProjectDir)\$(PublishDir) $(TargetFramework) $(RuntimeIdentifier)" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+  </Target>
+
+  <Target Name="bnrtool_GenerateGitVersion" BeforeTargets="GetGitHash;GenerateAssemblyAttributes">
+    <Exec Command="git rev-parse HEAD || echo unknown" ConsoleToMSBuild="true" IgnoreExitCode="true">
+      <Output PropertyName="bnrtool_OutputA" TaskParameter="ConsoleOutput"/>
+    </Exec>
+
+    <Exec Command="git describe --tag --abbrev=0 || echo unknown" ConsoleToMSBuild="true" IgnoreExitCode="true">
+      <Output PropertyName="bnrtool_OutputB" TaskParameter="ConsoleOutput"/>
+    </Exec>
+
+    <PropertyGroup>
+      <bnrtool_Version>$(bnrtool_OutputA.Trim()) $(bnrtool_OutputB.Trim())</bnrtool_Version>
+      <bnrtool_Tag>$(bnrtool_OutputB.Trim())</bnrtool_Tag>
+      <FileVersion>$(bnrtool_Version)</FileVersion>
+      <InformationalVersion>$(bnrtool_Version)</InformationalVersion>
+      <AssemblyVersion>$(bnrtool_Tag)</AssemblyVersion>
+    </PropertyGroup>
+    <ItemGroup>
+      <AssemblyMetadata Include="bnrtool_GitVersionMetaData">
+        <Value>$(bnrtool_Version)</Value>
+      </AssemblyMetadata>
+    </ItemGroup>
   </Target>
 
 </Project>
