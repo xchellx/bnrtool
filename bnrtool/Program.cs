@@ -287,7 +287,8 @@ namespace bnrtool
             }
             catch (Exception e)
             {
-                StdErr.WriteLine("ERROR: Failed to detect BNR format: {0}", e);
+                StdErr.WriteLine("ERROR: Failed to detect BNR format: {0} {1}", e, e.InnerException?.ToString()
+                    ?? string.Empty);
                 return Status.FmtError;
             }
             finally

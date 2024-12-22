@@ -61,11 +61,17 @@
   </Target>
 
   <Target Name="bnrtool_GenerateGitVersion" BeforeTargets="GetGitHash;GenerateAssemblyAttributes">
-    <Exec Command="git rev-parse HEAD || echo 0.0.0" ConsoleToMSBuild="true" IgnoreExitCode="true">
+    <Exec Command="git rev-parse HEAD 2> NUL || echo unknown" ConsoleToMSBuild="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+      <Output PropertyName="bnrtool_OutputA" TaskParameter="ConsoleOutput"/>
+    </Exec>
+    <Exec Command="git rev-parse HEAD 2> /dev/null || echo unknown" ConsoleToMSBuild="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
       <Output PropertyName="bnrtool_OutputA" TaskParameter="ConsoleOutput"/>
     </Exec>
 
-    <Exec Command="git describe --tag --abbrev=0 || echo unknown" ConsoleToMSBuild="true" IgnoreExitCode="true">
+    <Exec Command="git describe --tag --abbrev=0 2> NUL || echo v0.0.0" ConsoleToMSBuild="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+      <Output PropertyName="bnrtool_OutputB" TaskParameter="ConsoleOutput"/>
+    </Exec>
+    <Exec Command="git describe --tag --abbrev=0 2> /dev/null || echo v0.0.0" ConsoleToMSBuild="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
       <Output PropertyName="bnrtool_OutputB" TaskParameter="ConsoleOutput"/>
     </Exec>
 
